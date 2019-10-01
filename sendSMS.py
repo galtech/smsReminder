@@ -7,6 +7,11 @@ authToken = os.environ["TWILIO_AUTH_TOKEN"]
 
 client = Client(accountSID, authToken)
 
+message = """
+Reminder: You registered for CoderDojo Kells Autumn
+Season starting this Saturday 3:30-5pm for 8 weeks. Qus: info@coderdojokells.com
+"""
+
 # read in phone number list
 with open('data.csv', mode='r') as infile:
     reader = csv.reader(infile)
@@ -16,10 +21,9 @@ with open('data.csv', mode='r') as infile:
 for name,number in phoneNumbers.items():
     client.messages.create(
         to='+'+number,
-        from_="+16508305452",
-        body=name+" this is test message, sincerely - Peter"        
+        from_="CoderDojo", #"+16508305452",
+        body=name+', '+message 
     )
     
 
 
-#body="Hi, You registered for CoderDojo Kells Autumn season Oct5-Nov23. Looking forward to seeing you there. If you can no longer make it please let us know by emailing info@coderdojokells.com"
