@@ -9,11 +9,12 @@ client = Client(accountSID, authToken)
 
 message = """
 Reminder: You registered for CoderDojo Kells Autumn
-Season starting this Saturday 3:30-5pm for 8 weeks. Qus: info@coderdojokells.com
+Season starting this Sat. 3:30-5pm for 8 weeks. See you then.
+Qus: info@coderdojokells.com
 """
 
 # read in phone number list
-with open('data.csv', mode='r') as infile:
+with open('testdata.csv', mode='r') as infile:
     reader = csv.reader(infile)
     phoneNumbers = {rows[0]:rows[1] for rows in reader}
 
