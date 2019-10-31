@@ -7,6 +7,14 @@ code as I have done.
 
 Names and phone numbers can be stored in a CSV. You may use the sample file I have included as a guide.  
 
+### Prerequesite 
+
+Please install the Twilio library before using this SMS event reminder tool. This can be done using the following command.
+
+```
+pip install twilio 
+```
+
 ### How to run 
 
 When running from command line, follow script name with three arguments in the following order:
@@ -15,4 +23,8 @@ When running from command line, follow script name with three arguments in the f
 2. text file with desired SMS message (see sample file)
 3. A name that appears in the From location on the message the person receives
 
-example: python sendSMS.py data.csv msg.txt smsBot 
+example:
+
+```
+python sendSMS.py data.csv msg.txt smsBot 
+```
