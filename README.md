@@ -11,8 +11,8 @@ Names and phone numbers can be stored in a CSV. You may use the sample file I ha
 
 When running from command line, follow script name with three arguments in the following order:
 
-1 contact list in CSV format (see sample file)
-2 text file with desired SMS message (see sample file)
-3 A name that appears in the From location on the message the person receives
+1. contact list in CSV format (see sample file)
+2. text file with desired SMS message (see sample file)
+3. A name that appears in the From location on the message the person receives
 
 example: python sendSMS.py data.csv msg.txt smsBot 
